@@ -79,11 +79,19 @@ html {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 body {
     font-family: var(--font-primary);
     background-color: var(--bg-white);
     color: var(--text-dark);
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 /* Container Styles */
 .container,
@@ -95,6 +103,16 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
     display: block;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .container, .container-lg, .container-md, .container-sm {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0 2vw;
+    margin: 0;
+  }
 }
 .container-sm {
     width: 100%;
