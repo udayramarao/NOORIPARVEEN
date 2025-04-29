@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Charitable Trust</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/values-grid.css">
+    <link rel="stylesheet" href="css/story-section.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<style>
+        .modal-content img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: left;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .modal-content h2 {
+            color: #0277bd;
+            margin-bottom: 1rem;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .modal-content {
+                width: 90%;
+            }
+        }
+        .purple-btn {
+    background: rgb(111,53,255) !important;
+    color: #fff !important;
+    border-radius: 30px !important;
+    font-weight: bold !important;
+    box-shadow: 0 2px 8px rgba(111,53,255,0.10) !important;
+    transition: background 0.2s !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+.purple-btn:hover, .purple-btn:focus {
+    background: rgb(81, 33, 200) !important;
+}
+</style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="container-lg">
+            <div class="hero-content">
+    <h1>TRANSFORMING LIVES THROUGH COMPASSION</h1>
+    <p>Join us in our mission to create lasting positive change in communities across the globe.</p>
+    <a href="#donate" class="cta-button main-action-btn purple-btn animated-btn">MAKE A DIFFERENCE TODAY</a>
+    
+</div>
+        </div>
+        <svg class="svg-wave" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#e0f7fa" fill-opacity="1" d="M0,96L80,101.3C160,107,320,117,480,117.3C640,117,800,107,960,90.7C1120,75,1280,53,1360,42.7L1440,32V120H1360C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120H0V96Z"></path>
+        </svg>
+    </section>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+    <h1 class="main-title">NOOR CHARITABLE TRUST</h1>
+</div>
+<style>
+@media (max-width: 900px) {
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1rem;
+    }
+    .main-title {
+        flex: 1 1 auto;
+        text-align: left;
+    }
+    .hamburger {
+        margin-left: auto;
+        margin-right: 0;
+        order: 2;
+    }
+}
+@media (max-width: 600px) {
+    .logo-container {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 0.5rem;
+    }
+    .hamburger {
+        margin-left: auto;
+        margin-right: 0;
+        order: 2;
+    }
+}
+</style>
+    
+</div>
+<div class="nav-links" id="nav-links">
+    <a href="#gallery" class="nav-link">GALLERY</a>
+    <a href="#our-impact" class="nav-link">OUR IMPACT &amp; WORK</a>
+    <a href="#about" class="nav-link">ABOUT US</a>
+    <a href="#donate" class="donate-btn main-action-btn purple-btn animated-btn">DONATE</a>
+</div>
+        </div>
+    </nav>
+
+    <div class="impact-grid">
+        <div class="impact-stat">
+            <h3>50,000+</h3>
+            <p>LIVES IMPACTED</p>
+        </div>
+        <div class="impact-stat">
+            <h3>20+</h3>
+            <p>ACTIVE PROJECTS</p>
+        </div>
+        <div class="impact-stat">
+            <h3>10+</h3>
+            <p>COUNTRIES REACHED</p>
+        </div>
+        <div class="impact-stat">
+            <h3>$1 lakh+</h3>
+            <p>FUNDS RAISED</p>
+        </div>
+    </div>
+    <div class="work-showcase">
+        <div class="work-item">
+            <img src="images/sections/education.jpg" alt="Education Programs">
+            <div class="work-content">
+                <h3>EDUCATION PROGRAMS</h3>
+                <p>Providing quality education and learning resources to underprivileged children and communities.</p>
+                <button class="button" onclick="alert('More about Education Programs coming soon!')">LEARN MORE</button>
+            </div>
+        </div>
+        <div class="work-item">
+            <img src="images/sections/healthcare.jpg" alt="Healthcare Initiatives">
+            <div class="work-content">
+                <h3>HEALTHCARE INITIATIVES</h3>
+                <p>Supporting medical facilities and providing healthcare services to those in need.</p>
+                <button class="button" onclick="alert('More about Healthcare Initiatives coming soon!')">LEARN MORE</button>
+            </div>
+        </div>
+        <div class="work-item">
+            <img src="images/sections/community.jpg" alt="Community Development">
+            <div class="work-content">
+                <h3>COMMUNITY DEVELOPMENT</h3>
+                <p>Building sustainable infrastructure and empowering local communities.</p>
+                <button class="button" onclick="alert('More about Community Development coming soon!')">LEARN MORE</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Gallery Section (Dynamic, Responsive, Attractive) -->
+    <section id="gallery" class="section section-white gallery-unique-bg" style="display:none;">
+    <div class="container">
+        <div style="display:flex; justify-content:flex-end; margin-bottom:1rem;">
+            <button id="goHomeBtn" class="go-home-btn">&#8592; Go Back Home</button>
+        </div>
+        <div class="section-header">
+            <h2>GALLERY</h2>
+            <p>Explore our journey through these moments captured in our gallery.</p>
+        </div>
+        <div class="gallery-grid-wrapper">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Images will be injected by JavaScript -->
+            </div>
+        </div>
+    </div>
+    <!-- Modal for image preview -->
+    <div id="galleryModal" class="gallery-modal" style="display:none;">
+        <span class="gallery-modal-close" id="galleryModalClose">&times;</span>
+        <img class="gallery-modal-content" id="galleryModalImg" src="" alt="Gallery Preview">
+    </div>
+</section>
+<script>
+// Gallery images array
+const galleryImages = [
+    'photo1.jpg','photo2.jpg','photo3.jpg','photo4.jpg','photo5.jpg','photo6.jpg','photo7.jpg','photo8.jpg','photo9.jpg','photo10.jpg','photo11.jpg','photo12.jpg','photo13.jpg','photo14.jpg','phot14.jpg','photo15.jpg','photo16.jpg','photo17.jpg','photo18.jpg','photo19.jpg','photo20.jpg'
+];
+const galleryGrid = document.getElementById('galleryGrid');
+if (galleryGrid) {
+    galleryGrid.innerHTML = '';
+    galleryImages.forEach(img => {
+        const imgElem = document.createElement('img');
+        imgElem.src = `images/gallery/${img}`;
+        imgElem.alt = 'Gallery Image';
+        imgElem.className = 'gallery-img';
+        imgElem.tabIndex = 0;
+        imgElem.onclick = function() { openGalleryModal(this.src); };
+        imgElem.onkeydown = function(e) { if (e.key === 'Enter') openGalleryModal(this.src); };
+        galleryGrid.appendChild(imgElem);
+    });
+}
+// Modal functionality
+function openGalleryModal(src) {
+    document.getElementById('galleryModal').style.display = 'flex';
+    document.getElementById('galleryModalImg').src = src;
+}
+document.getElementById('galleryModalClose').onclick = function() {
+    document.getElementById('galleryModal').style.display = 'none';
+};
+window.onclick = function(event) {
+    if (event.target === document.getElementById('galleryModal')) {
+        document.getElementById('galleryModal').style.display = 'none';
+    }
+};
+// Show gallery on nav click
+const gallerySection = document.getElementById('gallery');
+document.querySelectorAll('a.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        if (this.getAttribute('href') === '#gallery') {
+            e.preventDefault();
+            gallerySection.style.display = 'block';
+            gallerySection.scrollIntoView({behavior:'smooth'});
+        } else {
+            gallerySection.style.display = 'none';
+        }
+    });
+});
+// Go Back Home button functionality
+const goHomeBtn = document.getElementById('goHomeBtn');
+if(goHomeBtn) {
+    goHomeBtn.onclick = function() {
+        gallerySection.style.display = 'none';
+        window.scrollTo({top:0, behavior:'smooth'});
+    };
+}
+</script>
+<style>
+/* Unique gallery background */
+.gallery-unique-bg {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f9fafb 70%, #ffe4ec 100%);
+    border-radius: 32px;
+    box-shadow: 0 8px 40px rgba(111,53,255,0.10), 0 2px 12px rgba(155,89,182,0.10);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+.go-home-btn {
+    background: #fff;
+    color: #7c3aed;
+    border: 2px solid #7c3aed;
+    border-radius: 24px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(124,58,237,0.07);
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, border 0.18s;
+    margin-bottom: 0.5rem;
+}
+.go-home-btn:hover, .go-home-btn:focus {
+    background: #7c3aed;
+    color: #fff;
+    border-color: #5b21b6;
+}
+#gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.1rem;
+    margin-top: 1.5rem;
+    padding-bottom: 2rem;
+    grid-auto-rows: 160px;
+}
+#gallery .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(124,58,237,0.08);
+    cursor: pointer;
+    border: 2.5px solid #fff;
+    transition: transform 0.22s, box-shadow 0.22s, border 0.22s;
+    background: linear-gradient(120deg, #f3e8ff 0%, #e0e7ff 100%);
+}
+#gallery .gallery-img:hover, #gallery .gallery-img:focus {
+    transform: scale(1.06) rotate(-1deg);
+    box-shadow: 0 8px 28px rgba(124,58,237,0.18);
+    border: 2.5px solid #7c3aed;
+    z-index: 2;
+}
+.gallery-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30,30,40,0.85);
+    animation: fadeIn 0.2s;
+}
+.gallery-modal-content {
+    max-width: 92vw;
+    max-height: 82vh;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    margin: auto;
+    display: block;
+    background: #fff;
+}
+.gallery-modal-close {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2100;
+    text-shadow: 0 2px 8px #333;
+}
+@media (max-width: 768px) {
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        grid-auto-rows: 90px;
+    }
+    .gallery-modal-content {
+        max-width: 98vw;
+        max-height: 60vh;
+    }
+    .gallery-modal-close {
+        top: 12px;
+        right: 16px;
+        font-size: 2.2rem;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
+
+
+    <style>
+    /* Responsive and attractive gallery */
+    #gallery .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.2rem;
+        margin-top: 1.5rem;
+        padding-bottom: 2rem;
+    }
+    #gallery .gallery-img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        background: #f5f5f5;
+    }
+    #gallery .gallery-img:hover {
+        transform: scale(1.04);
+        box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+        z-index: 2;
+    }
+    .gallery-modal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(30,30,40,0.85);
+        animation: fadeIn 0.2s;
+    }
+    .gallery-modal-content {
+        max-width: 92vw;
+        max-height: 82vh;
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        margin: auto;
+        display: block;
+        background: #fff;
+    }
+    .gallery-modal-close {
+        position: absolute;
+        top: 24px;
+        right: 40px;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 2100;
+        text-shadow: 0 2px 8px #333;
+    }
+    @media (max-width: 768px) {
+        #gallery .gallery-grid {
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+        .gallery-modal-content {
+            max-width: 98vw;
+            max-height: 60vh;
+        }
+        .gallery-modal-close {
+            top: 12px;
+            right: 16px;
+            font-size: 2.2rem;
+        }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    </style>
+
+        <!-- Our Impact & Work Section -->
+        <section id="our-impact" class="section section-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>OUR IMPACT & WORK</h2>
+                    <p>Discover the real difference we make through our focused initiatives. Each area reflects our commitment to compassion, empowerment, and sustainable change.</p>
+                </div>
+                <div class="work-showcase">
+                    <div class="work-item">
+                        <img src="images/health-camps.jpg" alt="Health Camps">
+                        <div class="work-content">
+                            <h3>HEALTH CAMPS</h3>
+                            <p>We have helped many poor people by conducting various health camps, providing free medical check-ups and distributing essential medicines. Our dedicated medical teams reach remote areas to ensure no one is left behind in receiving healthcare.</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <img src="images/women-empowerment.jpg" alt="Women Empowerment">
+                        <div class="work-content">
+                            <h3>WOMEN EMPOWERMENT</h3>
+                            <p>We empower women by providing books, clothes, and motivational talks. Our programs aim to boost confidence, encourage education, and create new opportunities for women to thrive in society.</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <img src="images/environment.jpg" alt="Environment">
+                        <div class="work-content">
+                            <h3>ENVIRONMENT</h3>
+                            <p>Our team actively plants trees and organizes clean-up drives to protect and restore the environment. We believe in sustainable living and work with communities to reduce waste and promote green practices.</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <img src="images/feeding-animals.jpg" alt="Feeding Animals">
+                        <div class="work-content">
+                            <h3>FEEDING ANIMALS</h3>
+                            <p>We care for stray and abandoned animals by providing regular feeding programs and medical care. Our volunteers ensure that animals in need receive compassion and support.</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <img src="images/covid-pandemic.jpg" alt="COVID-19 Pandemic">
+                        <div class="work-content">
+                            <h3>COVID-19 PANDEMIC</h3>
+                            <p>During the COVID-19 crisis, we helped many people by providing free medications, sanitizers, and masks. Our rapid response teams worked tirelessly to support vulnerable communities and raise awareness about safety measures.</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <img src="images/orphans.jpg" alt="Orphans">
+                        <div class="work-content">
+                            <h3>ORPHANS</h3>
+                            <p>We are committed to taking care of many orphans by providing shelter, education, and emotional support. Our mission is to give every child a loving environment and the tools they need to succeed in life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+        #our-impact {
+            margin: 0 auto;
+            float: none;
+            width: 100%;
+            max-width: 1200px;
+        }
+        </style>
+
+        <!-- DONATE Section -->
+        <section id="donate" class="section section-donate" style="background: linear-gradient(90deg, #e0f7fa 0%, #fff 100%); padding: 3rem 0; text-align: center;">
+            <div class="container">
+                <h2 style="color: #0277bd; margin-bottom: 1rem;">Support Our Mission</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #333;">Your contribution helps us provide healthcare, education, and hope to those who need it most. Every donation makes a difference!</p>
+                <button id="rzpDonateBtn" class="cta-button main-action-btn purple-btn animated-btn">DONATE NOW</button>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section section-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>ABOUT US</h2>
+                    <p>Learn about our journey, mission, and the dedicated team working to make a difference.</p>
+                </div>
+                <div class="about-content grid grid-2">
+                    <div class="about-text">
+                        <h3>OUR STORY</h3>
+                        <p>Founded in 2020, Noor Charitable Trust has been at the forefront of creating positive change in communities worldwide. Our journey began with a simple belief: that every person deserves access to basic necessities and opportunities for growth.</p>
+                        <h3>OUR MISSION</h3>
+                        <p>To empower communities through sustainable development, education, and healthcare initiatives, creating lasting positive impact and fostering self-reliance.</p>
+                        <h3>OUR VALUES</h3>
+                        <ul class="values-list">
+                            <li><strong>Compassion:</strong> We act with empathy and understanding</li>
+                            <li><strong>Integrity:</strong> We maintain transparency and accountability</li>
+                            <li><strong>Innovation:</strong> We seek creative solutions to challenges</li>
+                            <li><strong>Sustainability:</strong> We create lasting positive change</li>
+                        </ul>
+                        <a href="#" class="cta-button main-action-btn purple-btn animated-btn" id="openFullStoryModal">READ OUR FULL STORY</a>
+                    </div>
+                    <div class="about-image-grid">
+                        <img src="images/sections/about-1.jpg" alt="Community Work">
+                        <img src="images/sections/about-2.jpg" alt="Education Initiative">
+                        <img src="images/sections/about-3.jpg" alt="Healthcare Program">
+                        <img src="images/sections/about-4.jpg" alt="Team Work">
+                    </div>
+                  
+</head>
+<body>
+    <!-- ... rest of the HTML code ... -->
+
+
+
+    <!-- The Modal -->
+    <div id="fullStoryModal" class="modal">
+        <div class="modal-content">
+            <img src="images/dr-noori-parveen.jpg" alt="Full Story Image">
+            <h2>Dr. Noori Parveen: The ₹10 Doctor with a Heart of Gold</h2>
+            <p>In the heart of India, where hope often battles hardship, shines the inspiring story of Dr. Noori Parveen, fondly known as the “₹10 Doctor.” A General Physician by profession and a humanitarian by heart, Dr. Noori has been a beacon of light for the underprivileged since 2016.</p>
+            <p>Raised with values rooted in compassion and service, Noori always dreamed of healing more than just bodies—she wanted to heal communities. In 2020, after years of dedicated work, she officially registered her dream as Noori’s Hospitals, a charitable trust aimed at providing affordable healthcare to all. Her unique initiative of charging just ₹10 for consultations earned her the title “₹10 Doctor,” a symbol of accessible healthcare for the poor.</p>
+            <p>But Dr. Noori’s impact reaches far beyond hospital walls.</p>
+            <p>She runs an orphanage home, offering love, education, and shelter to children who have no one else. Her hands, though constantly busy healing patients, also find time to plant trees, clean streets, and care for animals. Through environmental campaigns and awareness drives, she has nurtured not only lives but also the earth.</p>
+            <p>From organizing free health camps in remote villages to distributing books and clothes to the needy, Noori’s life is a living example of selflessness. During the harrowing days of the COVID-19 pandemic, while many stayed behind closed doors, she stepped out—fearless and determined. She treated thousands, offered food and essentials to struggling families, and gave a voice to the voiceless.</p>
+            <p>Her story doesn’t end there. Dr. Noori regularly holds motivational talks for poor children and struggling communities, encouraging them to believe in education, hope, and hard work. To them, she’s not just a doctor—she’s a guide, a sister, a savior.</p>
+            <p>In a world often driven by profit, Dr. Noori Parveen stands as a powerful reminder that kindness still exists. Her work is a living testimony that one woman with a strong will and a compassionate heart can change countless lives.</p>
+            <p style="font-weight: bold; color: #0277bd; font-size: 1.1rem; margin-top: 1.5rem;">She is not just a doctor.<br>She is a movement.<br>She is Dr. Noori Parveen—the doctor who treats with medicine and heals with love.</p>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        // Modal functionality (existing)
+        var modal = document.getElementById("fullStoryModal");
+        var btn = document.getElementById("openFullStoryModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Razorpay Integration
+        var donateBtn = document.getElementById('rzpDonateBtn');
+        if (donateBtn) {
+            donateBtn.onclick = function(e) {
+                e.preventDefault();
+                var options = {
+                    "key": "rzp_test_YourKeyHere", // Replace with your Razorpay Test API Key
+                    "amount": "50000", // Amount is in paise (50000 = ₹500)
+                    "currency": "INR",
+                    "name": "Noor Charitable Trust",
+                    "description": "Support Our Mission",
+                    // "image": "https://yourdomain.com/logo.png",
+                    "handler": function (response){
+                        alert('Thank you for your donation! Payment ID: ' + response.razorpay_payment_id);
+                    },
+                    "prefill": {
+                        "name": "",
+                        "email": ""
+                    },
+                    "theme": {
+                        "color": "#0277bd"
+                    }
+                };
+                var rzp1 = new Razorpay(options);
+                rzp1.open();
+            }
+        }
+
+    </script>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+        });
+    </script>
+    <script src="js/gallery.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.innerWidth <= 768) {
+        var gallery = document.getElementById("gallery");
+        if (gallery) {
+            gallery.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+});
+</script>
+</body>
+</html>
